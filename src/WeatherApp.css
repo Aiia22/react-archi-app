@@ -1,0 +1,15 @@
+.WeatherApp {
+  text-align: center;
+}
+
+.part1 {
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
+  border-radius: 11px;
+  padding: 25px;
+  color: #fee8df;
+}
