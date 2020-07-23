@@ -1,15 +1,44 @@
 .WeatherApp {
   text-align: center;
+  color: white;
 }
 
 .part1 {
   background-image: linear-gradient(
     -225deg,
-    #473b7b 0%,
-    #3584a7 51%,
-    #30d2be 100%
+    #ffe29f 0%,
+    #ffa99f 48%,
+    #ff719a 100%
   );
   border-radius: 11px;
   padding: 25px;
-  color: #fee8df;
+
+  margin: 5px;
+}
+.part2 {
+  background-image: linear-gradient(
+    -225deg,
+    #ffe29f 0%,
+    #ffa99f 48%,
+    #ff719a 100%
+  );
+  border-radius: 11px;
+  padding: 25px;
+
+  margin: 5px;
+}
+.part3 {
+  background-image: linear-gradient(
+    -225deg,
+    #ffe29f 0%,
+    #ffa99f 48%,
+    #ff719a 100%
+  );
+  border-radius: 11px;
+  padding: 25px;
+
+  margin: 5px;
+}
+footer {
+  color: #ff929d;
 }
