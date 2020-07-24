@@ -4,11 +4,11 @@
 }
 
 .SearchEngine .BarStyle {
-  background-color: #fee8df;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.3);
   border-style: none;
-  color: #c06c84;
+  color: #405a92;
   text-align: left;
   padding: 5px;
   cursor: pointer;
@@ -26,12 +26,12 @@
 
 .SearchEngine ::placeholder {
   font-size: 14px;
-  color: #c06c84;
+  color: #405a92;
 }
 .SearchEngine #submitCity:hover {
-  background-color: #32bfb9;
-  color: #fee8df;
+  background-color: #34c6cb;
+  color: white;
 }
 .SearchEngine .iconLocation:hover {
-  color: #c06c84;
+  color: white;
 }
