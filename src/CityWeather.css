@@ -1,0 +1,49 @@
+.CityWeather .iconW {
+  width: 122px;
+  margin: 0px 11px;
+}
+.CityWeather .temperature {
+  padding-top: 11px;
+}
+.CityWeather .temp {
+  font-size: 55px;
+}
+
+.CityWeather .weatherDescription {
+  font-size: 44px;
+  color: #c06c84;
+}
+.weatherDescription::first-letter {
+  text-transform: capitalize;
+}
+.unit {
+  color: #c06c84;
+  font-size: 15px;
+  position: relative;
+  top: -40px;
+  font-weight: bolder;
+}
+a {
+  color: #fee8df;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.active {
+  color: #c06c84;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #c06c84;
+  text-decoration: none;
+}
+a:focus {
+  color: #c06c84;
+}
+.CityWeather .WeatherInfo {
+  list-style-type: none;
+  text-align: left;
+  font-size: 22px;
+  margin-top: 33px;
+}

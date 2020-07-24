@@ -12,7 +12,7 @@ export default function WeatherApp() {
   return (
     <div className="WeatherApp">
       <div className="container">
-        <div className="part1">
+        <div className="block1">
           <div className="row">
             <div col-10>
               <SearchEngine />
@@ -27,10 +27,10 @@ export default function WeatherApp() {
           <hr />
           <CurrentDate />
         </div>
-        <div className="part2">
+        <div className="block2">
           <CityWeather />
         </div>
-        <div className="part3">
+        <div className="block3">
           <div className="row weather-forecast" id="weekForecast">
             <div className="col-2">
               <Forecast day="Mon" maxTemp="22" minTemp="11" />
