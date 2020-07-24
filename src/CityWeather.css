@@ -11,13 +11,13 @@
 
 .CityWeather .weatherDescription {
   font-size: 44px;
-  color: #fee8df;
+  color: #405a92;
 }
 .weatherDescription::first-letter {
   text-transform: capitalize;
 }
 .unit {
-  color: #c06c84;
+  color: #34c6cb;
   font-size: 15px;
   position: relative;
   top: -40px;
@@ -29,17 +29,17 @@ a {
   cursor: pointer;
 }
 a.active {
-  color: #c06c84;
+  color: #34c6cb;
   text-decoration: none;
   cursor: pointer;
 }
 
 a:hover {
-  color: #c06c84;
+  color: #34c6cb;
   text-decoration: none;
 }
 a:focus {
-  color: #c06c84;
+  color: #34c6cb;
 }
 .CityWeather .WeatherInfo {
   list-style-type: none;

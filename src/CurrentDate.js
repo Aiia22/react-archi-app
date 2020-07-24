@@ -6,7 +6,6 @@ export default function CurrentDate() {
     <div className="CurrentDate">
       Monday, 11:11
       <small className="dislaimer">* Last uptaded</small>
-      <hr />
     </div>
   );
 }

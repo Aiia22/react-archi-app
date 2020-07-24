@@ -24,7 +24,6 @@ export default function WeatherApp() {
             </div>
           </div>
           <City />
-          <hr />
           <CurrentDate />
         </div>
         <div className="block2">
