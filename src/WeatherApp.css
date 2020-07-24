@@ -1,6 +1,7 @@
-.WeatherApp {
+.WeatherApp .container {
   text-align: center;
   color: white;
+  padding: 0;
 }
 
 .part1 {
@@ -11,6 +12,7 @@
     #ff719a 100%
   );
   border-radius: 11px;
+  padding-top: 0;
   padding: 25px;
 
   margin: 5px;

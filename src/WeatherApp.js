@@ -14,14 +14,18 @@ export default function WeatherApp() {
       <div className="container">
         <div className="part1">
           <div className="row">
-            <div col-6>
+            <div col-10>
               <SearchEngine />
             </div>
-            <div col-6>
-              <CurrentDate />
+            <div col-2>
+              <a href="." className="iconLocation" id="currentLocation">
+                <i className="fas fa-map-marker-alt" />
+              </a>
             </div>
           </div>
           <City />
+          <hr />
+          <CurrentDate />
         </div>
         <div className="part2">
           <CityWeather />
@@ -52,10 +56,10 @@ export default function WeatherApp() {
       <footer>
         This React project was coded by {""}
         <a href="https://www.linkedin.com/in/tatiana-leclerc/" targert="_blank">
-          Tatiana Leclerc
+          Tatiana Leclerc {""}
         </a>
-        {""}and is {""}{" "}
-        <a href="/" target="_blank">
+        and is {""}
+        <a href="." target="_blank">
           open-sourced on GitHub
         </a>
       </footer>
