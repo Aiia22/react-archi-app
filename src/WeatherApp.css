@@ -6,41 +6,26 @@
 }
 
 .block1 {
-  background-image: linear-gradient(
-    -225deg,
-    #ffe29f 0%,
-    #ffa99f 48%,
-    #ff719a 100%
-  );
+  background: #371b71;
   border-radius: 11px;
   padding-top: 0;
   padding: 25px;
 
-  margin: 5px;
+  margin: 11px;
 }
 .block2 {
-  background-image: linear-gradient(
-    -225deg,
-    #ffe29f 0%,
-    #ffa99f 48%,
-    #ff719a 100%
-  );
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   border-radius: 11px;
   padding: 25px;
 
-  margin: 5px;
+  margin: 11px;
 }
 .block3 {
-  background-image: linear-gradient(
-    -225deg,
-    #ffe29f 0%,
-    #ffa99f 48%,
-    #ff719a 100%
-  );
+  background: #34c6cb;
   border-radius: 11px;
   padding: 25px;
 
-  margin: 5px;
+  margin: 11px;
 }
 footer {
   color: #ff929d;

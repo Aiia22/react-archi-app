@@ -11,7 +11,7 @@
 
 .CityWeather .weatherDescription {
   font-size: 44px;
-  color: #c06c84;
+  color: #fee8df;
 }
 .weatherDescription::first-letter {
   text-transform: capitalize;
