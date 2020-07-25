@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import "./Forecast.css";
+import axios from "axios";
 
 export default function Forecast(props) {
   return (

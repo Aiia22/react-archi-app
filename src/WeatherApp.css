@@ -27,6 +27,9 @@
   margin: 11px;
 }
 footer {
-  color: #ff929d;
+  color: #405a92;
   text-align: center;
+}
+footer a {
+  color: #371b71;
 }

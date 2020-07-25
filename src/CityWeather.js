@@ -1,8 +1,10 @@
 import React from "react";
+import { formatTime } from "./Utilities";
+
 import "./index.css";
 import "./CityWeather.css";
 
-export default function CityWeather() {
+export default function CityWeather(props) {
   return (
     <div className="CityWeather">
       <div className="container">
@@ -17,11 +19,10 @@ export default function CityWeather() {
                 />
               </span>
               <span id="currentTemp" className="temp">
-                22{" "}
+                {Math.round(props.temp)}{" "}
               </span>
               <small className="unit">
                 <a href="." id="celsius" className="active">
-                  {" "}
                   °C{" "}
                 </a>{" "}
                 |
@@ -31,15 +32,15 @@ export default function CityWeather() {
               </small>
             </div>
             <div className="weatherDescription" id="description">
-              Cloud
+              {props.WDescription}
             </div>
           </div>
           <div className="col-5">
             <ul className="WeatherInfo">
-              <li className="precipitation"> Humidity:15% </li>
-              <li className="wind">Wind: 22 km/h</li>
-              <li className="sunrise">Sunrise: 05:44 </li>
-              <li className="sunset">Sunset:21:55 </li>
+              <li className="precipitation"> Humidity:{props.humidity}% </li>
+              <li className="wind">Wind: {Math.round(props.wind)} km/h</li>
+              <li className="sunrise">Sunrise: {formatTime(props.sunrise)} </li>
+              <li className="sunset">Sunset:{formatTime(props.sunset)} </li>
             </ul>
           </div>
         </div>
