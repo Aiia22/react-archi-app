@@ -1,43 +1,82 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-import SearchEngine from "./SearchEngine";
 import CurrentCity from "./CurrentCity";
 import CityWeather from "./CityWeather";
 import Forecast from "./Forecast";
 import axios from "axios";
 
-import "bootstrap/dist/css/bootstrap.css";
+import "./index.css";
+import "./App.css";
 import "./WeatherApp.css";
+import "./CurrentCity.css";
+import "./CityWeather.css";
 
-export default function WeatherApp() {
-  const city = "dublin";
+export default function WeatherApp(props) {
+  const [currentWeather, setCurrentWeather] = useState({ ready: false });
+  const [city, setCity] = useState("Dublin");
 
-  const [currentWeather, setCurrentWeather] = useState(null);
-  const [forecastWeather, setForecastWeather] = useState(null);
-
-  useEffect(() => {
-    let apiKey = "094780c710fa4efd669f0df8c3991927";
-    let apiUrlD = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-    axios.get(apiUrlD, apiUrlF).then((response, result) => {
-      setCurrentWeather(response.data);
+  function fetchWeatherData(response) {
+    console.log(response);
+    setCurrentWeather({
+      ready: true,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      timestamp: new Date(response.data.dt * 1000),
+      description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
+      wind: response.data.wind.speed,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon,
+      sunset: response.data.sys.sunset,
+      sunrise: response.data.sys.sunrise,
+      city: response.data.name,
     });
-  }, [city]);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+    let apiKey = "094780c710fa4efd669f0df8c3991927";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(fetchWeatherData);
+  }
 
   console.log(currentWeather);
 
-  if (!currentWeather) {
-    // currentWeather is not ready yet
-    return <p>Loading...</p>;
-  }
-
-  return (
-    <div className="WeatherApp">
-      <div className="container">
+  if (currentWeather.ready) {
+    return (
+      <div className="WeatherApp">
         <div className="block1">
           <div className="row">
             <div className="col-10">
-              <SearchEngine />
+              <form
+                id="search-form"
+                className="searchF"
+                onSubmit={handleSubmit}
+              >
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  autoComplete="off"
+                  className="BarStyle"
+                  id="searchBar"
+                  onChange={handleCityChange}
+                />
+                <input
+                  type="submit"
+                  value="Search"
+                  className="BarStyle"
+                  id="submitCity"
+                />
+              </form>
             </div>
             <div className="col-2">
               <a href="." className="iconLocation" id="currentLocation">
@@ -45,33 +84,16 @@ export default function WeatherApp() {
               </a>
             </div>
           </div>
-          <CurrentCity
-            city={currentWeather.name}
-            timestamp={currentWeather.dt}
-          />
+          <CurrentCity WeatherData={currentWeather} />
         </div>
         <div className="block2">
-          <CityWeather
-            temp={currentWeather.main.temp}
-            humidity={currentWeather.main.humidity}
-            wind={currentWeather.wind.speed} // props.speed
-            sunrise={currentWeather.sys.sunrise}
-            sunset={currentWeather.sys.sunset}
-            WDescription={currentWeather.weather[0].description}
-          />
+          <CityWeather WeatherData={currentWeather} />
         </div>
-        <Forecast temp={currentWeather.main.temp} />
+        <Forecast lat={currentWeather.lat} lon={currentWeather.lon} />
       </div>
-      <footer>
-        This React project was coded by {""}
-        <a href="https://www.linkedin.com/in/tatiana-leclerc/" targert="_blank">
-          Tatiana Leclerc {""}
-        </a>
-        and is {""}
-        <a href="." target="_blank">
-          open-sourced on GitHub
-        </a>
-      </footer>
-    </div>
-  );
+    );
+  } else {
+    search();
+    return "Loading...";
+  }
 }

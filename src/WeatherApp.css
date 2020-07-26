@@ -1,4 +1,4 @@
-.WeatherApp .container {
+.container {
   text-align: center;
   color: white;
   padding: 0;
@@ -32,4 +32,41 @@ footer {
 }
 footer a {
   color: #371b71;
+}
+.searchF {
+  margin: 0;
+  padding: 0px 11px;
+}
+
+.BarStyle {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.3);
+  border-style: none;
+  color: #405a92;
+  text-align: left;
+  padding: 5px;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
+#submitCity {
+  margin-left: 5px;
+}
+.iconLocation {
+  font-size: 28px;
+  position: relative;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
+
+::placeholder {
+  font-size: 14px;
+  color: #405a92;
+}
+#submitCity:hover {
+  background-color: #34c6cb;
+  color: white;
+}
+.iconLocation:hover {
+  color: white;
 }
