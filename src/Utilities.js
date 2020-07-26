@@ -27,9 +27,3 @@ export function formatTime(timestamp) {
   }
   return `${hours}:${minutes}`;
 }
-export function formatDateForecast(dateForecast) {
-  let date = new Date(dateForecast);
-  let dayArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  let day = dayArray[date.getDay()];
-  return `${day}`;
-}

@@ -10,13 +10,13 @@ import "./App.css";
 import "./WeatherApp.css";
 import "./CurrentCity.css";
 import "./CityWeather.css";
+import "./Forecast.css";
 
 export default function WeatherApp(props) {
   const [currentWeather, setCurrentWeather] = useState({ ready: false });
-  const [city, setCity] = useState("Dublin");
+  const [city, setCity] = useState(props.defaultCity);
 
   function fetchWeatherData(response) {
-    console.log(response);
     setCurrentWeather({
       ready: true,
       temperature: response.data.main.temp,
@@ -25,8 +25,6 @@ export default function WeatherApp(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
-      lat: response.data.coord.lat,
-      lon: response.data.coord.lon,
       sunset: response.data.sys.sunset,
       sunrise: response.data.sys.sunrise,
       city: response.data.name,
@@ -48,8 +46,6 @@ export default function WeatherApp(props) {
 
     axios.get(apiUrl).then(fetchWeatherData);
   }
-
-  console.log(currentWeather);
 
   if (currentWeather.ready) {
     return (
@@ -89,7 +85,7 @@ export default function WeatherApp(props) {
         <div className="block2">
           <CityWeather WeatherData={currentWeather} />
         </div>
-        <Forecast lat={currentWeather.lat} lon={currentWeather.lon} />
+        <Forecast city={currentWeather.city} />
       </div>
     );
   } else {

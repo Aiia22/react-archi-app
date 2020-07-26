@@ -6,7 +6,6 @@ import "./CityWeather.css";
 import "./WeatherApp.css";
 
 export default function CityWeather(props) {
-  console.log(props.WeatherData.humidity);
   return (
     <div className="CityWeather">
       <div className="row">
