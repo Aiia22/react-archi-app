@@ -29,3 +29,31 @@ export function formatTime(timestamp) {
   }
   return `${hours}:${minutes}`;
 }
+export function formatTimeSunS(sunrise) {
+  let date = new Date(sunrise);
+  let hours = date.getHours();
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+export function formatTimeSunR(sunset) {
+  let date = new Date(sunset);
+  let hours = date.getHours();
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}

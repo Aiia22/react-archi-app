@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <WeatherApp defaultCity="Dublin" />
+        <WeatherApp defaultCity="Paris" />
       </div>
       <footer>
         This React project was coded by {""}
@@ -16,7 +16,7 @@ export default function App() {
           Tatiana Leclerc {""}
         </a>
         and is {""}
-        <a href="." target="_blank">
+        <a href="https://github.com/Aiia22/react-archi-app" target="_blank">
           open-sourced on GitHub
         </a>
         ,

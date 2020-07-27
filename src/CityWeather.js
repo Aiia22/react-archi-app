@@ -1,5 +1,5 @@
 import React from "react";
-import { formatTime } from "./Utilities";
+import { formatTimeSunR, formatTimeSunS } from "./Utilities";
 import CurrentTemp from "./CurrentTemp";
 
 import "./index.css";
@@ -31,10 +31,10 @@ export default function CityWeather(props) {
               Wind: {Math.round(props.WeatherData.wind)} km/h
             </li>
             <li className="sunrise">
-              Sunrise: {formatTime(props.WeatherData.sunrise)}{" "}
+              Sunrise: {formatTimeSunR(props.WeatherData.sunrise * 1000)}{" "}
             </li>
             <li className="sunset">
-              Sunset:{formatTime(props.WeatherData.sunset)}{" "}
+              Sunset:{formatTimeSunS(props.WeatherData.sunset * 1000)}{" "}
             </li>
           </ul>
         </div>
