@@ -4,6 +4,7 @@ import CurrentCity from "./CurrentCity";
 import CityWeather from "./CityWeather";
 import Forecast from "./Forecast";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 
 import "./index.css";
 import "./App.css";
@@ -52,7 +53,7 @@ export default function WeatherApp(props) {
       <div className="WeatherApp">
         <div className="block1">
           <div className="row">
-            <div className="col-10">
+            <div className="col-6">
               <form
                 id="search-form"
                 className="searchF"
@@ -74,10 +75,13 @@ export default function WeatherApp(props) {
                 />
               </form>
             </div>
-            <div className="col-2">
-              <a href="." className="iconLocation" id="currentLocation">
-                <i className="fas fa-map-marker-alt" />
-              </a>
+            <div className="col-6">
+              <img
+                src="img/planet (1).svg"
+                className="imgApp"
+                alt="Planet"
+                width="100px"
+              />
             </div>
           </div>
           <CurrentCity WeatherData={currentWeather} />
@@ -92,6 +96,6 @@ export default function WeatherApp(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return <Loader type="Audio" color="#407DA5" height={222} width={444} />;
   }
 }

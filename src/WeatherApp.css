@@ -27,7 +27,8 @@ footer a {
   color: #371b71;
 }
 .searchF {
-  padding: 0px 11px;
+  padding: 0px 22px;
+  margin-bottom: 0;
 }
 
 .BarStyle {
@@ -44,12 +45,6 @@ footer a {
 #submitCity {
   margin-left: 5px;
 }
-.iconLocation {
-  font-size: 28px;
-  position: relative;
-  cursor: pointer;
-  transition: 150ms ease-in-out;
-}
 
 ::placeholder {
   font-size: 14px;
@@ -59,6 +54,17 @@ footer a {
   background-color: #34c6cb;
   color: white;
 }
+.iconLocation {
+  font-size: 28px;
+  position: relative;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
 .iconLocation:hover {
   color: white;
+}
+.imgApp {
+  display: block;
+  margin-left: 170px;
+  margin-bottom: 0;
 }
