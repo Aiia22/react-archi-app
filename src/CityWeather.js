@@ -3,6 +3,7 @@ import { formatTime } from "./Utilities";
 import CurrentTemp from "./CurrentTemp";
 
 import "./index.css";
+import "./App.css";
 import "./CityWeather.css";
 import "./WeatherApp.css";
 

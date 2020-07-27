@@ -3,6 +3,7 @@ import ForecastDays from "./ForecastDays";
 import axios from "axios";
 
 import "./index.css";
+import "./App.css";
 import "./Forecast.css";
 
 export default function Forecast(props) {

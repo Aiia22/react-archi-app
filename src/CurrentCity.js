@@ -1,5 +1,7 @@
 import React from "react";
+
 import "./index.css";
+import "./App.css";
 import "./CurrentCity.css";
 import "./WeatherApp.css";
 import { formatDate } from "./Utilities";
