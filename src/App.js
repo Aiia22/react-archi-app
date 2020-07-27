@@ -12,15 +12,23 @@ export default function App() {
       </div>
       <footer>
         This React project was coded by {""}
-        <a href="https://www.linkedin.com/in/tatiana-leclerc/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/tatiana-leclerc/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Tatiana Leclerc {""}
         </a>
         and is {""}
-        <a href="https://github.com/Aiia22/react-archi-app" target="_blank">
+        <a
+          href="https://github.com/Aiia22/react-archi-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           open-sourced on GitHub
         </a>
         ,
-        <a href="." target="_blank">
+        <a href="." target="_blank" rel="noopener noreferrer">
           {""} hosted on Netlify.
         </a>
       </footer>
