@@ -12,7 +12,10 @@ export default function CurrentCity(props) {
       <h1>{props.WeatherData.city}</h1>
       <div className="CurrentDate">
         {formatDate(props.WeatherData.timestamp)}
-        <small className="dislaimer">* Last uptaded</small>
+        <p className="dislaimer">
+          {" "}
+          {""} <small>* Last uptaded</small>
+        </p>
       </div>
     </div>
   );

@@ -13,7 +13,10 @@ export default function CityWeather(props) {
       <div className="row">
         <div className="col-7">
           <div className="temperature">
-            <CurrentTemp celsius={props.WeatherData.temperature} />
+            <CurrentTemp
+              celsius={props.WeatherData.temperature}
+              icon={props.WeatherData.icon}
+            />
           </div>
           <div className="weatherDescription" id="description">
             {props.WeatherData.description}

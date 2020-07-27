@@ -11,7 +11,6 @@ export default function Forecast(props) {
   const [weatherForecast, setWeatherForecast] = useState(null);
 
   function fetchForecast(response) {
-    console.log(response);
     setWeatherForecast(response.data);
     setLoaded(true);
   }
@@ -46,7 +45,7 @@ export default function Forecast(props) {
   } else {
     let apiKey = "094780c710fa4efd669f0df8c3991927";
     let apiUrlF = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
-    console.log("test");
+
     axios.get(apiUrlF).then(fetchForecast);
 
     return null;
