@@ -28,7 +28,11 @@ export default function App() {
           open-sourced on GitHub
         </a>
         ,
-        <a href="." target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://goofy-colden-dda5f2.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {""} hosted on Netlify.
         </a>
       </footer>
