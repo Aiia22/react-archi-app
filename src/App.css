@@ -1,3 +1,6 @@
 .container {
+  text-align: center;
   color: white;
+  padding: 0;
+  max-width: 777px;
 }

@@ -85,7 +85,9 @@ export default function WeatherApp(props) {
         <div className="block2">
           <CityWeather WeatherData={currentWeather} />
         </div>
-        <Forecast city={currentWeather.city} />
+        <div className="block3">
+          <Forecast city={currentWeather.city} />
+        </div>
       </div>
     );
   } else {
