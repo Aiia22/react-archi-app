@@ -1,5 +1,6 @@
-.WeatherApp {
-  max-width: 950px;
+.WeatherApp .AppWrap {
+  max-width: 800px;
+  text-align: center;
 }
 
 .WeatherApp .block1 {
@@ -48,10 +49,4 @@
 .WeatherApp #submitCity:hover {
   background-color: #34c6cb;
   color: white;
-}
-
-.WeatherApp .imgApp {
-  display: block;
-  margin-left: 222px;
-  margin-bottom: 0;
 }

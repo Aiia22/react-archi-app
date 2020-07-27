@@ -49,47 +49,43 @@ export default function WeatherApp(props) {
   if (currentWeather.ready) {
     return (
       <div className="WeatherApp">
-        <div className="block1">
-          <div className="row">
-            <div className="col-6">
-              <form
-                id="search-form"
-                className="searchF"
-                onSubmit={handleSubmit}
-              >
-                <input
-                  type="search"
-                  placeholder="Type a city.."
-                  autoComplete="off"
-                  className="BarStyle"
-                  id="searchBar"
-                  onChange={handleCityChange}
-                />
-                <input
-                  type="submit"
-                  value="Search"
-                  className="BarStyle"
-                  id="submitCity"
-                />
-              </form>
-            </div>
+        <div className="AppWrap">
+          <div className="block1">
+            <div className="row">
+              <div className="col-5">
+                <form
+                  id="search-form"
+                  className="searchF"
+                  onSubmit={handleSubmit}
+                >
+                  <input
+                    type="search"
+                    placeholder="Type a city.."
+                    autoComplete="off"
+                    className="BarStyle"
+                    id="searchBar"
+                    onChange={handleCityChange}
+                  />
+                  <input
+                    type="submit"
+                    value="Search"
+                    className="BarStyle"
+                    id="submitCity"
+                  />
+                </form>
+              </div>
 
-            <div className="col-6">
-              <img
-                src="img/planet (1).svg"
-                className="imgApp"
-                alt="Planet"
-                width="100px"
-              />
+              <div className="col-7">
+                <CurrentCity WeatherData={currentWeather} />
+              </div>
             </div>
           </div>
-          <CurrentCity WeatherData={currentWeather} />
-        </div>
-        <div className="block2">
-          <CityWeather WeatherData={currentWeather} />
-        </div>
-        <div className="block3">
-          <Forecast city={currentWeather.city} />
+          <div className="block2">
+            <CityWeather WeatherData={currentWeather} />
+          </div>
+          <div className="block3">
+            <Forecast city={currentWeather.city} />
+          </div>
         </div>
       </div>
     );

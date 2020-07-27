@@ -1,8 +1,8 @@
-.container {
+.App .container {
   text-align: center;
   color: white;
   padding: 0;
-  max-width: 950px;
+  max-width: 800px;
 }
 .App footer {
   color: #405a92;
