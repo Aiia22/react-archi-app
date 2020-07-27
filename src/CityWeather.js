@@ -1,5 +1,6 @@
 import React from "react";
 import { formatTime } from "./Utilities";
+import CurrentTemp from "./CurrentTemp";
 
 import "./index.css";
 import "./CityWeather.css";
@@ -11,25 +12,7 @@ export default function CityWeather(props) {
       <div className="row">
         <div className="col-7">
           <div className="temperature">
-            <span>
-              <img
-                src="img/02n.png"
-                className="iconW"
-                alt="Icon current weather"
-              />
-            </span>
-            <span id="currentTemp" className="temp">
-              {Math.round(props.WeatherData.temperature)}{" "}
-            </span>
-            <small className="unit">
-              <a href="." id="celsius" className="active">
-                °C{" "}
-              </a>{" "}
-              |
-              <a href="." id="fahr">
-                °F
-              </a>
-            </small>
+            <CurrentTemp celsius={props.WeatherData.temperature} />
           </div>
           <div className="weatherDescription" id="description">
             {props.WeatherData.description}
