@@ -12,7 +12,7 @@ export default function App() {
       </div>
       <footer>
         This React project was coded by {""}
-        <a href="https://www.linkedin.com/in/tatiana-leclerc/" targert="_blank">
+        <a href="https://www.linkedin.com/in/tatiana-leclerc/" target="_blank">
           Tatiana Leclerc {""}
         </a>
         and is {""}
