@@ -5,7 +5,6 @@ import CurrentTemp from "./CurrentTemp";
 import "./index.css";
 import "./App.css";
 import "./CityWeather.css";
-import "./WeatherApp.css";
 
 export default function CityWeather(props) {
   return (

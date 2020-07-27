@@ -1,0 +1,38 @@
+.CurrentTemp {
+  padding-top: 11px;
+}
+.CurrentTemp .iconW {
+  width: 122px;
+  margin: 0px 11px;
+}
+
+.CurrentTemp .temp {
+  font-size: 55px;
+  position: relative;
+  top: 20px;
+}
+.CurrentTemp .unit {
+  color: #34c6cb;
+  font-size: 15px;
+  position: relative;
+  bottom: 10px;
+  font-weight: bolder;
+}
+.CurrentTemp a {
+  color: #fee8df;
+  text-decoration: none;
+  cursor: pointer;
+}
+.CurrentTemp a.active {
+  color: #34c6cb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.CurrentTemp a:hover {
+  color: #34c6cb;
+  text-decoration: none;
+}
+.CurrentTemp a:focus {
+  color: #34c6cb;
+}

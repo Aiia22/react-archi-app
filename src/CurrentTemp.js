@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+import "./index.css";
+import "./App.css";
+import "./CurrentTemp.css";
+
 export default function CurrentTemp(props) {
   const [unit, setUnit] = useState("celsius");
 
@@ -45,7 +49,11 @@ export default function CurrentTemp(props) {
     return (
       <div className="CurrentTemp">
         <span>
-          <img src="img/02n.png" className="iconW" alt="Icon current weather" />{" "}
+          <img
+            src={"img/" + props.icon + ".png"}
+            className="iconW"
+            alt="Icon current weather"
+          />{" "}
         </span>
         <span id="currentTemp" className="temp">
           {Math.round(farhenheit())}{" "}

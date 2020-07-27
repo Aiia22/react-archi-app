@@ -1,48 +1,43 @@
-.block1 {
+.WeatherApp {
+  max-width: 950px;
+}
+
+.WeatherApp .block1 {
   background: #371b71;
   border-radius: 11px;
   padding: 25px;
-
   margin: 11px;
 }
-.block2 {
+.WeatherApp .block2 {
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   border-radius: 11px;
   padding: 25px;
-
   margin: 11px;
 }
-.block3 {
+.WeatherApp .block3 {
   background: #34c6cb;
   border-radius: 11px;
   padding: 25px;
-
   margin: 11px;
 }
-footer {
-  color: #405a92;
-  text-align: center;
-}
-footer a {
-  color: #371b71;
-}
-.searchF {
-  padding: 0px 22px;
-  margin-bottom: 0;
+
+.WeatherApp .searchF {
+  padding: 0;
+  margin: 0;
 }
 
-.BarStyle {
+.WeatherApp .BarStyle {
   background-color: white;
   border-radius: 5px;
   box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.3);
   border-style: none;
   color: #405a92;
   text-align: left;
-  padding: 5px;
+  padding: 5px 15px;
   cursor: pointer;
   transition: 150ms ease-in-out;
 }
-#submitCity {
+.WeatherApp #submitCity {
   margin-left: 5px;
 }
 
@@ -50,21 +45,13 @@ footer a {
   font-size: 14px;
   color: #405a92;
 }
-#submitCity:hover {
+.WeatherApp #submitCity:hover {
   background-color: #34c6cb;
   color: white;
 }
-.iconLocation {
-  font-size: 28px;
-  position: relative;
-  cursor: pointer;
-  transition: 150ms ease-in-out;
-}
-.iconLocation:hover {
-  color: white;
-}
-.imgApp {
+
+.WeatherApp .imgApp {
   display: block;
-  margin-left: 170px;
+  margin-left: 222px;
   margin-bottom: 0;
 }

@@ -2,5 +2,18 @@
   text-align: center;
   color: white;
   padding: 0;
-  max-width: 777px;
+  max-width: 950px;
+}
+.App footer {
+  color: #405a92;
+  text-align: center;
+  margin-bottom: 22px;
+}
+.App footer a {
+  color: #34c6cb;
+  text-decoration: none;
+}
+.App footer a:hover {
+  color: #405a92;
+  text-decoration: none;
 }

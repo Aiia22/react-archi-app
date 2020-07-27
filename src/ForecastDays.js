@@ -1,7 +1,8 @@
 import React from "react";
 
-import "./Forecast.css";
+import "./index.css";
 import "./App.css";
+import "./Forecast.css";
 
 export default function ForecastDays(props) {
   function formatDateForecast() {

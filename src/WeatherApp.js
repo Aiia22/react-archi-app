@@ -9,11 +9,10 @@ import Loader from "react-loader-spinner";
 import "./index.css";
 import "./App.css";
 import "./WeatherApp.css";
-import "./CurrentCity.css";
-import "./CityWeather.css";
-import "./Forecast.css";
 
 export default function WeatherApp(props) {
+  let apiKey = "094780c710fa4efd669f0df8c3991927";
+
   const [currentWeather, setCurrentWeather] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
@@ -42,7 +41,6 @@ export default function WeatherApp(props) {
   }
 
   function search() {
-    let apiKey = "094780c710fa4efd669f0df8c3991927";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(fetchWeatherData);
@@ -75,6 +73,7 @@ export default function WeatherApp(props) {
                 />
               </form>
             </div>
+
             <div className="col-6">
               <img
                 src="img/planet (1).svg"
